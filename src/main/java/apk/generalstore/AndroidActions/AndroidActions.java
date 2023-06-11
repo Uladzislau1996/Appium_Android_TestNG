@@ -19,7 +19,7 @@ public class AndroidActions {
         ((JavascriptExecutor) driver).executeScript("mobile: longClickGesture", ImmutableMap.of(
                 "elementId", ((RemoteWebElement) element).getId(), "duration", 2000));
     }
-    
+
     public void scrollToText(String text) {
         driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()" +
                 ".scrollable(true).instance(0)).scrollIntoView(new UiSelector()." +
