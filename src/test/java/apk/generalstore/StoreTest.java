@@ -2,11 +2,13 @@ package apk.generalstore;
 
 import apk.generalstore.PageObjects.BasketScreen;
 import apk.generalstore.PageObjects.CatalogueScreen;
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class StoreTest extends BaseTest {
 
+    @Description("Login and to buy 2 items")
     @Test
     public void makeOrderTest() throws InterruptedException {
         login.setNameField("TestQA");
@@ -18,9 +20,8 @@ public class StoreTest extends BaseTest {
         BasketScreen basketScreen = catalogue.goToBasket();
         double productSum = basketScreen.getProductSum();
         double totalSum = basketScreen.getDisplayedSum();
-        Assert.assertEquals(productSum, totalSum, "Incorrect totalSum");
+        Assert.assertEquals(productSum, totalSum, "Incorrect total sum");
         basketScreen.submitTerms();
         basketScreen.submitOrder();
     }
-
 }

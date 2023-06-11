@@ -18,7 +18,7 @@ public class LoginScreen extends AndroidActions {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @AndroidFindBy(id="com.androidsample.generalstore:id/nameField")
+    @AndroidFindBy(id = "com.androidsample.generalstore:id/nameField")
     private WebElement nameField;
 
     @AndroidFindBy(id = "com.androidsample.generalstore:id/radioFemale")
@@ -31,7 +31,7 @@ public class LoginScreen extends AndroidActions {
     private WebElement country;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Argentina']")
-    private WebElement  Argentina;
+    private WebElement Argentina;
 
     @AndroidFindBy(id = "com.androidsample.generalstore:id/btnLetsShop")
     private WebElement submit;

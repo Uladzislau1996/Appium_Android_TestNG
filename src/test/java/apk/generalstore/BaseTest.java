@@ -40,7 +40,7 @@ public class BaseTest {
 
     //stop driver and server
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
         service.stop();
     }

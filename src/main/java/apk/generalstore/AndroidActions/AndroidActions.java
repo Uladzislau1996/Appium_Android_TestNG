@@ -15,12 +15,12 @@ public class AndroidActions {
         this.driver = driver;
     }
 
-    public void longPress(WebElement element){
+    public void longPress(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("mobile: longClickGesture", ImmutableMap.of(
                 "elementId", ((RemoteWebElement) element).getId(), "duration", 2000));
     }
 
-    public void scrollToEnd(){
+    public void scrollToEnd() {
         boolean canScrollMore;
         do {
             canScrollMore = (Boolean) ((JavascriptExecutor) driver).executeScript("mobile: scrollGesture", ImmutableMap.of(
@@ -31,10 +31,10 @@ public class AndroidActions {
         } while (canScrollMore);
     }
 
-    public void scrollToText(String text){
+    public void scrollToText(String text) {
         driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()" +
                 ".scrollable(true).instance(0)).scrollIntoView(new UiSelector()." +
-                "textContains(\""+text+"\").instance(0))"));
+                "textContains(\"" + text + "\").instance(0))"));
     }
 
     public Double getPrice(String itemPrice) {
@@ -42,7 +42,7 @@ public class AndroidActions {
         return price;
     }
 
-    public void swipeAction(WebElement element, String direction){
+    public void swipeAction(WebElement element, String direction) {
         ((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
                 "elementId", ((RemoteWebElement) element).getId(),
                 "direction", direction,
