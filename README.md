@@ -23,4 +23,7 @@ service.start();<br/>
 3. Confirm terms
 4. Go to website
 
+##### Enter the following command to see allure report 
+allure serve (Path to allure-result directory in your project)
+
 
